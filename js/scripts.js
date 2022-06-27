@@ -13,3 +13,34 @@ $(function(){
     });
     
 })
+
+    $(document).ready(function(){
+        $("#reserveButton").click(function(){
+            $("#reserveModalBody").modal('show');
+        });
+
+        $("#loginButton").click(function() {
+            $("#loginModalBody").modal("show");
+        });
+
+        $("#reserveModalHide").click(function() {
+            $("#reserveModalBody").modal('hide');
+        });
+
+        $("#loginModalHide").click(function() {
+            $("#loginModalBody").modal('hide');
+        });
+        
+    });
+
+
+// $(function(){
+//     $("#reserveButton").click(function() {
+//         $("#reserveButton").modal("show");
+//       });
+
+//     $("#loginButton").click(function() {
+//         $("#loginButton").modal("show");
+//       });
+// })    
+   

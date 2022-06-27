@@ -17,7 +17,7 @@
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 <body>
-
+    <!-- jumbotron section -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row ">
@@ -29,7 +29,7 @@
                     <h2>a better way to camp</h2>
                </div>
 
-    <!-- tootip button section -->
+            <!-- tootip button section -->
 
                <!-- text-nowrap enable text not to be wrapped -->
                <!-- <div class="col-md-4 col-xl-2 btn-lg text-nowrap"> -->
@@ -39,21 +39,21 @@
                         <!-- <a class="btn btn-info text-white " type="button" href="#reserveForm" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us <strong> at 1-206-555-1234 </strong>">Reserve Campsite</a> 
                     </div>-->
 
-    <!-- tootip button section -->
+             <!-- tootip button section -->
 
-    <!-- modal button section  -->
-                <div class="col-md-4 col-xl-2 btn-lg text-nowrap">
-                    <a class="btn btn-info text-white" type="button" href="#reserveModal" data-toggle="modal" data-target="#reserveModal" id="#reserveModal">Reserve Campsite</a>
-                </div>
-    <!-- modal button section  -->
+                <!-- modal button section  -->
+                    <div class="col-md-4 col-xl-2 btn-lg text-nowrap">
+                        <a class="btn btn-info text-white" type="button" id="reserveButton" >Reserve Campsite</a>
+                    </div>
+                <!-- modal button section  -->
             </div>
         </div>
     </header>
-
-    <div id="reserveModal" class="modal fade" role="dialog">
+    <!-- modal content section -->
+    <div id="reserveModalBody" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header" id="modalHeaderBg">
                     <h3 class="modal-title">Reserve a Campsite</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -97,7 +97,7 @@
                         <div class="row form-group">
                             <div class="col">
                                 <!-- <h3>Campsite Type</h3> -->
-                                <button class="btn btn-secondary" type="submit" data-dismiss="modal" >Cancel</button>
+                                <button class="btn btn-secondary" type="submit" id="reserveModalHide" >Cancel</button>
                                 <button class="btn btn-primary" type="submit">Search</button>
                             </div>
                             
@@ -110,6 +110,11 @@
         </div>
     </div>
 
+    <!-- modal content section end -->
+    <!-- jumbotron section -->
+
+
+    <!-- navbar section -->
     </div>
     <nav class="navbar navbar-expand-sm navbar-light sticky-top">
         <div class="container">
@@ -126,16 +131,19 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                     
                 </ul>
-                <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal" class="text-white">
-                        <i class="fa fa-sign-in text-white"></i> Login
-                    </a>
-                </span>
+                <!-- login button section -->
+                    <span class="navbar-text ml-auto">
+                        <a role="button" id="loginButton" class="text-white">
+                            <i class="fa fa-sign-in text-white"></i> Login
+                        </a>
+                    </span>
+                <!-- login button section end-->
+
             </div>
         </div>
     </nav>
-
-    <div id="loginModal" class="modal fade" role="dialog">
+    <!-- login modal section -->
+    <div id="loginModalBody" class="modal fade loginButton" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -161,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <button type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
+                                    <button type="button" id="loginModalHide" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                                     <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                                 </div>
                             </div>
@@ -173,8 +181,12 @@
         </div>
 
     </div>
-<!-- carousel section  -->
-   <div class="contaner">
+    <!-- login modal section end-->
+    <!-- navbar section end-->
+
+
+   <!-- carousel section  -->
+   <div class="container">
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -306,12 +318,12 @@
     </footer>
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
         <!-- build:js js/main.js -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <!-- endbuild -->
-
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+    
 <!-- Jquery for tootip button section -->
         <!-- <script>
             $(function (){

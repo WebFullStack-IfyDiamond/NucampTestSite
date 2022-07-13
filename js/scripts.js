@@ -34,13 +34,5 @@ $(function(){
     });
 
 
-// $(function(){
-//     $("#reserveButton").click(function() {
-//         $("#reserveButton").modal("show");
-//       });
-
-//     $("#loginButton").click(function() {
-//         $("#loginButton").modal("show");
-//       });
-// })    
+  
    
